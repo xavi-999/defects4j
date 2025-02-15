@@ -168,8 +168,8 @@ JUNIT_VINTAGE_ENGINE_URL="https://repo1.maven.org/maven2/org/junit/vintage/junit
 
 cd "$MUTOOLS" && mkdir -p lib \
               && download_url $JUNIT_URL && mv $JUNIT_JAR lib/ \
-              && download_url $JUNIT_ADDONS_URL && mv $JUNIT_ADDONS_JAR lib/
-              && download_url $JUNIT_JUPITER_API_URL && mv $JUNIT_JUPITER_API_JAR lib/ \
+              && download_url $JUNIT_ADDONS_URL && mv $JUNIT_ADDONS_JAR lib/ && \
+              download_url $JUNIT_JUPITER_API_URL && mv $JUNIT_JUPITER_API_JAR lib/ \
               && download_url $JUNIT_JUPITER_ENGINE_URL && mv $JUNIT_JUPITER_ENGINE_JAR lib/ \
               && download_url $JUNIT_VINTAGE_ENGINE_URL && mv $JUNIT_VINTAGE_ENGINE_JAR lib/
 
