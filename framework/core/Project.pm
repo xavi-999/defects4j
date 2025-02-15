@@ -1130,11 +1130,15 @@ sub _ant_call {
 #
 sub _ant_call_comp {
     @_ >= 2 or die $ARG_ERROR;
-    my ($self, $target, $option_str, $log_file, $ant_cmd) =  @_;
-    $option_str = "-Dbuild.compiler=javac1.7 " . ($option_str // "");
+    my ($self, $target, $option_str, $log_file, $ant_cmd) = @_;
+    
+    # Use Java 8+ (Fix for JUnit 5)
+    $option_str = "-Dbuild.compiler=javac1.8 " . ($option_str // ""); 
+    
     $ant_cmd = "$MAJOR_ROOT/bin/ant" unless defined $ant_cmd;
     return $self->_ant_call($target, $option_str, $log_file, $ant_cmd);
 }
+
 sub _call_major {
     @_ >= 2 or die $ARG_ERROR;
     my ($self, $target, $option_str, $log_file, $ant_cmd) =  @_;
