@@ -890,6 +890,7 @@ sub mutation_analysis {
 
     return $self->_call_major("mutation.test",
                             "-Dmajor.kill.log=$basedir/$Mutation::KILL_FILE " .
+                            "-Dmajor.export.killDetails=true" .
                             "$relevant $log $exclude $single_test_opt");
 }
 
@@ -923,6 +924,7 @@ sub mutation_analysis_ext {
     return $self->_call_major("mutation.test",
                             "-Dd4j.test.dir=$dir -Dd4j.test.include=$include " .
                             "-Dmajor.kill.log=$basedir/$Mutation::KILL_FILE " .
+                            "-Dmajor.export.killDetails=true" .
                             "$log $exclude $single_test_opt");
 }
 
