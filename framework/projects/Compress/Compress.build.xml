@@ -28,6 +28,9 @@ of the checked-out project version.
 <project name="D4j-Compress" basedir="${basedir}">
 
     <property name="junit.jar" value="${d4j.home}/framework/projects/lib/junit-4.11.jar"/>
+    <property name="junit5.api.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-api-5.8.2.jar"/>
+    <property name="junit5.engine.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-engine-5.8.2.jar"/>
+    <property name="junit5.vintage.jar" value="${d4j.home}/framework/projects/lib/junit-vintage-engine-5.8.2.jar"/>
 
     <!-- Do not download maven dependencies -->
     <property name="maven.settings.offline" value="true" />
@@ -73,6 +76,9 @@ of the checked-out project version.
         <pathelement location="${classes.dir}"/>
         <pathelement location="${test.classes.dir}"/>
         <pathelement path="${junit.jar}" />
+        <pathelement path="${junit5.api.jar}" />
+        <pathelement path="${junit5.engine.jar}" />
+        <pathelement path="${junit5.vintage.jar}" />
 	<pathelement path="${dependency.jar}" />
         <fileset dir="${d4j.dir.projects}/Compress/lib/">
              <include name="**/*.jar" />

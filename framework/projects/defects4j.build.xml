@@ -47,6 +47,9 @@ project-specific build file ("project_id"/"project_id".build.xml) for the
 
     <!-- Dependencies used by all projects -->
     <property name="junit.jar"  value="${d4j.home}/framework/projects/lib/junit-4.11.jar"/>
+    <property name="junit5.api.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-api-5.8.2.jar"/>
+    <property name="junit5.engine.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-engine-5.8.2.jar"/>
+    <property name="junit5.vintage.jar" value="${d4j.home}/framework/projects/lib/junit-vintage-engine-5.8.2.jar"/>
     <property name="cobertura.jar" value="${d4j.home}/framework/projects/lib/cobertura-2.0.3.jar"/>
 
     <!-- Location of libraries of test generation tool-->
@@ -146,6 +149,9 @@ project-specific build file ("project_id"/"project_id".build.xml) for the
             <classpath>
                 <pathelement path="${formatter.jar}" />
                 <pathelement path="${junit.jar}" />
+                <pathelement path="${junit5.api.jar}" />
+                <pathelement path="${junit5.engine.jar}" />
+                <pathelement path="${junit5.vintage.jar}" />
                 <pathelement path="${d4j.dir.classes.testgen}" />
                 <path refid="d4j.test.classpath"/>
                 <!-- Add dependencies to runtime libraries of test generation tools -->
@@ -268,6 +274,9 @@ project-specific build file ("project_id"/"project_id".build.xml) for the
                optimize="false">
                <classpath>
                     <pathelement path="${junit.jar}" />
+                    <pathelement path="${junit5.api.jar}" />
+                    <pathelement path="${junit5.engine.jar}" />
+                    <pathelement path="${junit5.vintage.jar}" />
                     <path refid="d4j.test.classpath" />
                     <pathelement path="${classes.dir}" />
                     <!-- Add dependencies to runtime libraries of test generation tools -->
@@ -296,6 +305,9 @@ project-specific build file ("project_id"/"project_id".build.xml) for the
                 <pathelement path="${d4j.dir.classes.testgen}" />
                 <pathelement path="${formatter.jar}" />
                 <pathelement path="${junit.jar}" />
+                <pathelement path="${junit5.api.jar}" />
+                <pathelement path="${junit5.engine.jar}" />
+                <pathelement path="${junit5.vintage.jar}" />
                 <pathelement path="${classes.dir}" />
                 <path refid="d4j.test.classpath"/>
                 <!-- Add dependencies to code coverage tools -->
