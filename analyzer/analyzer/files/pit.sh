@@ -15,7 +15,12 @@ PITEST="$PIT_HOME/pitest-1.6.7.jar"
 PITEST_ENTRY="$PIT_HOME/pitest-entry-1.6.7.jar"
 PITEST_CLI="$PIT_HOME/pitest-command-line-1.6.7.jar"
 
-CP="$JUNIT:$JUNITX:$PITEST:$PITEST_ENTRY:$PITEST_CLI"
+# Add JUnit 5 dependencies
+JUNIT5_API="$LIB_HOME/junit-jupiter-api-5.8.2.jar"
+JUNIT5_ENGINE="$LIB_HOME/junit-jupiter-engine-5.8.2.jar"
+JUNIT5_VINTAGE="$LIB_HOME/junit-vintage-engine-5.8.2.jar"
+
+CP="$JUNIT:$JUNITX:$PITEST:$PITEST_ENTRY:$PITEST_CLI:$JUNIT5_API:$JUNIT5_ENGINE:$JUNIT5_VINTAGE"
 
 echo "Base is           : $BASE"
 echo "Mutation tools is : $MUTATION_TOOLS"
