@@ -49,9 +49,9 @@ project-specific build file ("project_id"/"project_id".build.xml) for the
     <property name="junit.jar"  value="${d4j.home}/framework/projects/lib/junit-4.12-hamcrest-1.3.jar"/>
 
     <!-- Dependencies for JUnit Jupiter -->
-    <property name="junit.jupiter.api.jar" value="${d4j.home}/framework/projects/lib/${JUNIT_JUPITER_API_JAR}" />
-    <property name="junit.jupiter.engine.jar" value="${d4j.home}/framework/projects/lib/${JUNIT_JUPITER_ENGINE_JAR}" />
-    <property name="junit.vintage.engine.jar" value="${d4j.home}/framework/projects/lib/${JUNIT_VINTAGE_ENGINE_JAR}" />
+    <property name="junit.jupiter.api.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-api-5.8.2.jar" />
+    <property name="junit.jupiter.engine.jar" value="${d4j.home}/framework/projects/lib/junit-jupiter-engine-5.8.2.jar" />
+    <property name="junit.vintage.engine.jar" value="${d4j.home}/framework/projects/lib/junit-vintage-engine-5.8.2.jar" />
 
     <property name="cobertura.jar" value="${d4j.home}/framework/projects/lib/cobertura-2.0.3.jar"/>
     <property name="cobertura.lib" value="${d4j.home}/framework/projects/lib/cobertura-2.0.3-lib"/>
