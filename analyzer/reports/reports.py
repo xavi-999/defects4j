@@ -438,6 +438,17 @@ class MajorReport(MultipleFilesReport):
             logfile, delimiter=":", header=None, names=columns, on_bad_lines='skip'
         ).set_index(columns[0])
 
+        print(f"Mutants log file: {logfile}")
+        print(f"Kill csv file: {csvfile}")
+        print(f"Mutants log file length: {len(mutants_df)}")
+        print(f"Kill csv file length: {len(kill_df)}")
+        print(f"Mutants log file columns: {mutants_df.columns}")
+        print(f"Kill csv file columns: {kill_df.columns}")
+        print(f"Mutants log file head:\n{mutants_df.head()}")
+        print(f"Kill csv file head:\n{kill_df.head()}")
+        print(f"Mutant log file:\n{mutants_df.to_string()}")
+        print(f"Kill csv file:\n{kill_df.to_string()}")
+
         # fix mismatch in length
         if kill_df.empty or len(kill_df) == 0:
             # empty kill csv -> all mutants are live
